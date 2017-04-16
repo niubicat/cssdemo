@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flexibleBox</title>
+    <style>
+        div.a{
+            width:350px;
+            height:100px;
+            border:1px solid black;
+
+            /* Firefox */
+            display:-moz-box;
+            -moz-box-pack:end;
+            -moz-box-align:end;
+            -moz-box-direction:reverse;
+
+            /* Safari, Chrome, and Opera */
+            display:-webkit-box;
+            -webkit-box-pack:end;
+            -webkit-box-align:end;
+            -webkit-box-direction:reverse;
+
+            /* W3C */
+            display:box;
+            box-pack:end;
+            box-align:end;
+            box-direction:reverse;
+        }
+
+        div.b
+        {
+            display:-moz-box; /* Firefox */
+            display:-webkit-box; /* Safari and Chrome */
+            display: box;
+            width:300px;
+            border:1px solid black;
+        }
+        #p1
+        {
+            -moz-box-flex:1.0; /* Firefox */
+            -webkit-box-flex:1.0; /* Safari and Chrome */
+            box-flex:1.0;
+            border:1px solid red;
+        }
+
+        #p2
+        {
+            -moz-box-flex:2.0; /* Firefox */
+            -webkit-box-flex:2.0; /* Safari and Chrome */
+            box-flex:2.0;
+            border:1px solid blue;
+        }
+
+        .container
+        {
+            width:300px;
+            border:1px dotted black;
+
+            /* Firefox */
+            display: -moz-flex; /*display:-moz-box;*/
+            -moz-flex-direction: row-reverse; /*-moz-box-orient:horizontal;*/
+            -moz-flex-wrap: wrap; /*-moz-box-lines:multiple;*/
+
+            /* Safari and Chrome */
+            display:-webkit-flex; /*display:-webkit-box;*/
+            -webkit-flex-direction: row-reverse; /*-webkit-box-orient:horizontal;*/
+            -webkit-flex-wrap: wrap; /*-webkit-box-lines:multiple;*/
+
+            /* W3C */
+            display:flex; /*display:box;*/
+            flex-direction: row-reverse;/*box-orient:horizontal;*/
+            flex-wrap: wrap; /*box-lines:multiple;*/
+        }
+
+        .box
+        {
+            width:100px;
+
+            /*!* Firefox *!*/
+            /*-moz-box-flex: 1.0;*/
+
+            /*!* Safari and Chrome *!*/
+            /*-webkit-box-flex: 1.0;*/
+
+            /*!* W3C *!*/
+            /*box-flex: 1.0;*/
+        }
+    </style>
+</head>
+<body>
+<div class="a">
+    <p>我是居中对齐的1。</p>
+    <p>我是居中对齐的2。</p>
+</div>
+
+<p><b>注释：</b>IE 不支持 box-pack 和 box-align 属性。</p>
+<div class="b">
+    <p id="p1">Hello</p>
+    <p id="p2">W3School</p>
+</div>
+<br />
+<div class="container">
+    <div class="box">11111111111</div>
+    <div class="box">22222222222</div>
+    <div class="box">33333333333</div>
+    <div class="box">44444444444</div>
+</div>
+<a href="http://blog.csdn.net/q617610589/article/details/51596357">Flex布局新旧混合写法详解（兼容微信）</a>
+</body>
+</html>

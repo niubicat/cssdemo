@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<style>
+		table, td, th{
+			border:1px solid black;
+			border-collapse: separate;/*separate;*/ /*collapes边框合并*/
+			border-spacing: 10px 40px;
+			empty-cells: hide; /*show 显示*/
+			table-layout: fixed;
+		}
+		caption{
+			caption-side: bottom; /*caption 在底部*/
+		}
+	</style>
+</head>
+<body>
+	<table>
+	<caption> this is a table title </caption>
+		<tr >
+			<th>Firstname</th>
+			<th>Lastname</th>
+		</tr>
+		<tr >
+			<td>Steven</td>
+			<td>Jobs</td>	
+		</tr>
+		<tr >
+			<td>Eigth</td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td width="20%">1000000000000000000000000000</td>
+			<td width="40%">10000000</td>
+			<td width="40%">100</td>
+		</tr>
+	</table>
+</body>
+</html>

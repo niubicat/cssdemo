@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		.div7
+{
+width:100px;
+height:100px;
+background:blue;
+
+}
+
+.div7:hover
+{
+width:300px;
+transition:width 2s;
+-moz-transition:width 2s; /* Firefox 4 */
+-webkit-transition:width 2s; /* Safari and Chrome */
+-o-transition:width 2s; /* Opera */
+
+transition-timing-function: linear;
+-moz-transition-timing-function: linear; /* Firefox 4 */
+-webkit-transition-timing-function: linear; /* Safari 和 Chrome */
+-o-transition-timing-function: linear; /* Opera */
+
+-webkit-transition-property:width; 
+-webkit-transition-duration:5s;
+-webkit-transition-delay:2s;
+}
+	</style>
+</head>
+<body>
+	<div class="div7"></div>
+
+<p>请把鼠标指针移动到蓝色的 div 元素上，就可以看到过渡效果。</p>
+
+<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+</body>
+</html>

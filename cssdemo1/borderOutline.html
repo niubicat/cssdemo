@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <meta charset="UTF-8">
+        <title>border</title>
+
+    <style type="text/css">
+        p.a {
+            border: medium double rgb(250,0,255);
+            outline:#00ff00 dotted thick;
+        }
+        p.b {
+            border: medium dotted rgb(250,0,255)
+        }
+        p.c {
+            border: medium dashed rgb(250,0,255)
+        }
+        p.d {
+            border: medium solid rgb(250,0,255)
+        }
+        p.e {
+            border: medium groove rgb(250,0,255)
+        }
+        p.f {
+            border: medium ridge rgb(250,0,255)
+        }
+        p.g {
+            border:2px solid;
+            padding:10px;
+            background:#dddddd;
+            border-bottom-left-radius: 2em;
+        }
+        p.h {
+            width:300px;
+            height:100px;
+            background-color:#ff9900;
+            -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+            box-shadow: 10px 10px 5px 2px #888888;
+        }
+        div#round {
+            width: 400px;
+            height: 100px;
+            border: 30px solid; /*要指定boder类型*/
+            -moz-border-image: url(11.jpeg) 27 round;
+            -webkit-border-image: url(222.png) 30 round;
+            -o-border-image: url(11.jpeg) 27 round;
+            border-image: url(222.png) 30 round;
+        }
+    </style>
+</head>
+
+<body>
+<p class="a">Some1 text</p>
+<p class="b">Some2 text</p>
+<p class="c">Some3 text</p>
+<p class="d">Some4 text</p>
+<p class="e">Some5 text</p>
+<p class="f">Some6 text</p>
+<p class="g">Some7 text</p>
+<p class="h">Some8 text</p>
+<div id="round">这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。这是文本。</div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>content</title>
+    <style type="text/css">
+        .abc {counter-reset:section;}
+        h1 {counter-reset:subsection;}
+        h1:before
+        {
+            counter-increment:section;
+            content:"Section " counter(section) ". ";
+        }
+        h2:before
+        {
+            counter-increment:subsection;
+            content:counter(section) "." counter(subsection) " ";
+        }
+
+        q:lang(en)
+        {
+            quotes: '"' '"' "'" "'"
+        }
+    </style>
+</head>
+<body>
+<div class="abc">
+<p><b>注释：</b>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 counter-increment 属性。</p>
+
+<h1>HTML tutorials</h1>
+<h2>HTML Tutorial</h2>
+<h2>XHTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+
+<h1>Scripting tutorials</h1>
+<h2>JavaScript</h2>
+<h2>VBScript</h2>
+
+<h1>XML tutorials</h1>
+<h2>XML</h2>
+<h2>XSL</h2>
+</div>
+
+<p><q>This is a <q>big</q> quote.</q></p>
+<q><q>注释：</q>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 quotes 属性。</q>
+</body>
+</html>

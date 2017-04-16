@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>uerInterface</title>
+	<style>
+		.div1{
+			appearance: button;
+			-webkit-appearance: button;
+			/*normal	将元素呈现为常规元素。
+			icon	将元素呈现为图标（小图片）。
+			window	将元素呈现为视口。
+			button	将元素呈现为按钮。
+			menu	将元素呈现为一套供用户选择的选项。
+			field*/
+		}
+
+		div.container
+		{
+		position: relative;
+		background-color: #ec4c4c;
+		margin-top: 10px;
+		width:600px;
+		border:1px solid black;
+		}
+		div.box1
+		{
+		/*float:left;*/
+		width:40%;
+
+
+		}
+		div.box2
+		{
+		/*float:left;*/
+		
+		width:40%;
+
+
+		}
+
+		div.container2
+		{
+		margin-top: 90px;
+		width:600px;
+		border:10px solid;
+		}
+		div.box
+		{
+		box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+		width:50%;
+		border:2px solid red;
+		float:left;
+		}
+		.div0
+		{
+		margin:20px;
+		width:150px; 
+		padding:10px;
+		height:70px;
+		border:2px solid black;
+		outline:20px solid red;
+		outline-offset:3px;
+		} 
+		.div9
+		{
+		border:2px solid;
+		padding:10px 40px; 
+		width:300px;
+		resize:both;
+		overflow:auto; /*必须设置overflow属性*/
+		}
+	</style>
+</head>
+<body>
+<div class="div1">一些文本。</div>
+<div class="container">
+<div class="box1">这个 div 占据左半部分。</div>
+<div class="box2">这个 div 占据右半部分。</div>
+</div>
+
+<div class="container2">
+<div class="box">这个 div 占据左半部分。</div>
+<div class="box">这个 div 占据右半部分。</div>
+</div>
+
+<p><b>注释：</b>Internet Explorer 和 Opera 不支持 support outline-offset 属性。</p>
+
+<div class="div0">这个 div 在边框边缘之外 15 像素处有一个轮廓。</div>
+
+<div class="div9">resize 属性规定是否可由用户调整元素尺寸。</div>
+
+<p><b>注释：</b> Firefox 4+、Safari 以及 Chrome 支持 resize 属性。</p>
+</body>
+</html>

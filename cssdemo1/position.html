@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style type="text/css">
+        img.bbs
+        {
+            position:absolute;
+           clip:rect(0px 50px 200px 0px);  /*clip:rect()裁切矩形*/
+        }
+        p.dd {display: inline;}/*table-cell*/
+        div.ee {display: none;}
+        img.top {vertical-align:text-bottom;} /* 用于内联元素，表格，块状元素时添加display: table-cell;*/
+        img.bottom {vertical-align:middle;}
+    </style>
+</head>
+<body>
+<p>clip 属性剪切了一幅图像：</p>
+<p><img class="bbs" border="0" src="clip.gif" width="120" height="151"></p>
+<div style="position: absolute; top: 200px;">
+<p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+<span style="cursor:auto">
+Auto</span><br />
+<span style="cursor:crosshair">
+Crosshair</span><br />
+<span style="cursor:default">
+Default</span><br />
+<span style="cursor:pointer">
+Pointer</span><br />
+<span style="cursor:move">
+Move</span><br />
+<span style="cursor:e-resize">
+e-resize</span><br />
+<span style="cursor:ne-resize">
+ne-resize</span><br />
+<span style="cursor:nw-resize">
+nw-resize</span><br />
+<span style="cursor:n-resize">
+n-resize</span><br />
+<span style="cursor:se-resize">
+se-resize</span><br />
+<span style="cursor:sw-resize">
+sw-resize</span><br />
+<span style="cursor:s-resize">
+s-resize</span><br />
+<span style="cursor:w-resize">
+w-resize</span><br />
+<span style="cursor:text">
+text</span><br />
+<span style="cursor:wait">
+wait</span><br />
+<span style="cursor:help">
+help</span>
+</div>
+
+<div style="position: absolute; top: 550px; ">
+    <p class="dd">本例中的样式表把段落元素设置为内联元素。</p>
+
+    <p class="dd">而 div 元素不会显示出来！</p>
+
+    <div class="ee">div 元素的内容不会显示出来！</div>
+</div>
+
+<div class="ab" style="position: absolute; top: 650px; ">
+    <p >
+        这是一幅<img class="top" border="0" src="verticalalign.gif" />位于段落中的图像。
+    </p>
+
+    <p>
+        这是一幅<img class="bottom" border="0" src="verticalalign.gif" />位于段落中的图像。
+    </p>
+</div>
+</body>
+</html>

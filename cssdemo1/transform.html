@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<style>
+		div.test1{
+			margin:30px;
+			width: 200px;
+			height: 50px;
+			background: yellow;
+			-webkit-transform:rotate(9deg);
+			-moz-transform:rotate(9deg);
+			-ms-transform: rotate(9deg);
+			-o-transform: rotate(9deg);
+			transform: rotate(9deg);
+		}
+		div.polaroid
+		{
+		width:294px;
+		padding:10px 10px 20px 10px;
+		border:1px solid #BFBFBF;
+		background-color: #E9E9E9;
+		/* Add box-shadow */
+		box-shadow:2px 2px 3px #aaaaaa;
+		}
+		div.rotate_left
+		{
+		/*float:left;*/
+		-ms-transform:rotate(7deg); /* IE 9 */
+		-moz-transform:rotate(7deg); /* Firefox */
+		-webkit-transform:rotate(7deg); /* Safari and Chrome */
+		-o-transform:rotate(7deg); /* Opera */
+		transform:rotate(7deg);
+		}
+
+		div.rotate_right
+		{
+		/*float:left;*/
+		-ms-transform:rotate(-8deg); /* IE 9 */
+		-moz-transform:rotate(-8deg); /* Firefox */
+		-webkit-transform:rotate(-8deg); /* Safari and Chrome */
+		-o-transform:rotate(-8deg); /* Opera */
+		transform:rotate(-8deg);
+		}
+		div.test2{  
+			width: 100px;
+			height: 100px;
+			background-color: #555;
+			border: 1px solid black;
+			transform:translate(10px, 10px); /*x和y轴移动*/
+		}
+		#div1
+		{
+		position: relative;
+		height: 150px;
+		width: 150px;
+		margin: 50px;
+		padding:10px;
+		border: 1px solid black;
+		perspective:150px; /*当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。*/
+		-webkit-perspective:150px; /* Safari and Chrome */
+		}
+
+		#div2
+		{
+		padding:50px;
+		position: absolute;
+		border: 1px solid black;
+		background-color: yellow;
+		transform: rotateX(45deg); /*3D效果*/
+		-webkit-transform: rotateX(45deg); /* Safari and Chrome */
+		}
+		.div5
+		{
+		position:relative;
+		height:60px;
+		width:60px;
+		border:1px solid #000;
+		background-color:yellow;
+		transform:rotateY(180deg);
+		-webkit-transform:rotateY(180deg); /* Chrome and Safari */
+		-moz-transform:rotateY(180deg); /* Firefox */
+		}
+		#div3
+		{
+		-webkit-backface-visibility:hidden;
+		-moz-backface-visibility:hidden;
+		-ms-backface-visibility:hidden;
+		}
+		#div4
+		{
+		-webkit-backface-visibility:visible;
+		-moz-backface-visibility:visible;
+		-ms-backface-visibility:visible;
+		}
+	</style>
+</head>
+<body>
+	<div class="test1">hello world</div>
+
+
+<div class="polaroid rotate_left">
+<img src="tra1.jpg" alt="郁金香" width="284" height="213" />
+<p class="caption">上海鲜花港的郁金香，花名：Ballade Dream。</p>
+</div>
+
+<div class="polaroid rotate_right">
+<img src="tra2.jpg" alt="世博中国馆" width="284" height="213" />
+<p class="caption">2010年上海世博会，中国馆。</p>
+</div>
+<div class="test2"></div>
+<div id="div1">
+  <div id="div2">HELLO</div>
+</div>
+
+<p>本例有两个 div 元素，均旋转 180 度，背向用户。</p>
+
+<p>第一个 div 元素的 backface-visibility 属性设置为 "hidden"，所以应该是不可见的。</p>
+
+<div class="div5" id="div3">DIV 1</div>
+
+<div class="div5" id="div4">DIV 2</div>
+
+<p><b>注释：</b>本例只在 Internet Explorer 10、Firefox、Chrome 以及 Safari 中有效。</p>
+</body>
+</html>
